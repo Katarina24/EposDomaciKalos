@@ -1,0 +1,188 @@
+body{
+    background-image: url("../img/strana2.png");
+    background-color: #212029;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center;
+    
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  header{
+    background-image: linear-gradient(to bottom, #9ABB8B, #4A4A4A);
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  a{
+    color:whitesmoke;
+    text-decoration: none;
+  }
+  
+  .navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  .nav-link:hover{
+    color:black;
+  }
+
+  .nav-menu{
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .nav-branding{
+    font-size: 2rem;
+  }
+  
+  .nav-link{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  
+  .hamburger{
+    display:none;
+    cursor: pointer;
+  }
+  
+  .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #f5f5f5;
+  }
+
+  .onama{
+    margin-left: 5rem;
+    margin-top: 3rem;
+    padding: 3rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 30rem;
+    height: 33rem;
+    background: linear-gradient(144.51deg, rgba(78, 78, 78, 0.63) 2.29%, rgba(245, 245, 245, 0) 100%);
+    filter: drop-shadow(6px 6px 20px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(10px);
+    border-radius: 55px;
+  }
+
+  .title{
+    font-family: 'Viaoda Libre';
+    font-size: 50px;
+    text-align: center;
+    color:#f5f5f5;
+  }
+  .onamatekst{
+    margin: 2rem;
+    font-family: 'Manrope';
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color:#f5f5f5;
+  }
+
+  .dugme{
+    margin-bottom: 2rem;
+    width: 400px;
+    height: 99px;
+    background: linear-gradient(180deg, #9ABB8B 0%, #4A4A4A 100%);
+    border-radius: 49.5px;
+    color:#f5f5f5;
+    font-size: 2rem;
+    font-size:x-large;
+    font-family: system-ui,
+  }
+  
+  .dugme:hover{
+    color:black;
+  }
+    
+
+  @media(max-width: 768px){
+    .hamburger{
+      display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+      position: fixed;
+      left: -100%;
+      top:70px;
+      gap:0;
+      flex-direction: column;
+      background-color: #4A4A4A;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .nav-item{
+      margin: 16px 0;
+    }
+
+    .nav-menu.active{
+      left: 0;
+    }
+
+    .dugme{
+      width:70%;
+      height: auto;
+      font-size:16px;
+      padding: 1rem;
+    }
+
+    .onamateksts{
+      font-size:16px;
+    }
+
+    .title{
+      
+      font-size: 25px;
+    }
+
+    .onama{
+      padding: 2rem 0 0 0;
+    }
+
+  }
+  @media(max-width:1231px){
+    
+
+    .onama{
+      width: 60%;
+      height: 20%;
+      font-size: medium;
+      margin-left: 4rem;
+    }
+    
+
+  }

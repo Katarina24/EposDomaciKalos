@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalos</title>
+    <link rel="stylesheet" href="css/rezervacije.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="nav-branding">Kaloš</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="rezervacije.html" class="nav-link">Reservation</a>
+          </li>
+        </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="kartica">
+      <div class="naslov">Reservation</div>
+      <div class="form">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" class="polje" required />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" class="polje" required />
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" class="polje" required />
+        <label for="people">How many people will be at table?</label>
+        <select name="numpeople" class="polje" id="people" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <label for="datum" id="datuml">Pick a date:</label>
+        <input type="date" class="polje" id="datum" required />
+        <label for="vreme">Pick time:</label>
+        <input
+          type="time"
+          class="polje"
+          id="vreme"
+          min="09:00"
+          max="20:00"
+          required
+        />
+      </div>
+      <input type="submit" value="Confirm reservation" id="potvrdi" />
+      <div id="popup-container">
+        <div class="popup">
+          <p>You successfully made a reservation!</p>
+        </div>
+      </div>
+
+      <script src="script/index.js"></script>
+      <script src="script/script.js"></script>
+    </div>
+  </body>
+</html>
